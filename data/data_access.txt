@@ -1,0 +1,24 @@
+
+Data Access Instructions
+-------------------------
+
+The dataset used in this project corresponds to single-cell RNA-seq data generated using Oxford Nanopore technology. The data is publicly available under the SRA accession ID:
+
+    SRR12727766
+
+To access the data manually, follow these steps:
+
+1. Visit the NCBI SRA page for the dataset:
+   https://www.ncbi.nlm.nih.gov/sra/SRR12727766
+
+2. Click on the "Send to:" dropdown, select "File", then choose "FASTQ" format.
+
+3. Alternatively, you can download the FASTQ files using the SRA Toolkit with the following command:
+
+   ```bash
+   fastq-dump --gzip --split-files SRR12727766
+   ```
+
+4. Once downloaded, move the resulting FASTQ files into the `\data` folder of your project structure to be compatible with the provided pipeline.
+
+Note: Due to file size constraints, only a subset of this dataset may be uploaded for use in Taiga or GitHub. If the full dataset is not included, please refer to this instruction and re-download using the steps above.

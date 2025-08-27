@@ -1,0 +1,30 @@
+
+task: >
+  You are given single-cell RNA-seq data (Oxford Nanopore, Q20+ chemistry) for sample SRR12727766.
+  Using the nf-core/scnanoseq pipeline, process the FASTQ file in \data and answer the following questions:
+
+questions:
+  - id: q1
+    stage: quality_control
+    text: "How many reads passed the initial quality control (QC) filtering step?"
+    answer_type: integer_exact
+
+  - id: q2
+    stage: basecalling
+    text: "What basecalling method was applied to convert raw signals into nucleotide sequences?"
+    answer_type: string_exact
+
+  - id: q3
+    stage: alignment
+    text: "Which genome build was used for aligning the single-cell reads?"
+    answer_type: string_exact
+
+  - id: q4
+    stage: gene_quantification
+    text: "What was the total number of unique genes detected per cell on average?"
+    answer_type: integer_exact
+
+  - id: q5
+    stage: barcode_correction
+    text: "How many barcodes remained after correction and filtering?"
+    answer_type: integer_exact

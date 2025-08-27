@@ -1,0 +1,7 @@
+
+data_source: "https://www.ebi.ac.uk/ena/browser/view/SRR12727766"
+paper_reference: "Trull A. et al. (2025). scnanoseq: an nf-core pipeline for Oxford Nanopore single-cell RNA-seq. bioRxiv. https://doi.org/10.1101/2025.04.08.647887"
+tools_links:
+  - "https://github.com/nf-core/scnanoseq"
+  - "https://nanoporetech.com"
+  - "https://github.com/nextflow-io/nextflow"
