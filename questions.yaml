@@ -1,30 +1,30 @@
 
 task: >
-  You are given single-cell RNA-seq data (Oxford Nanopore, Q20+ chemistry) for sample SRR12727766.
-  Using the nf-core/scnanoseq pipeline, process the FASTQ file in \data and answer the following questions:
+  You have been given 16S rRNA sequencing data (SRR35204195). Run the pipeline as described in the workflow and answer the following questions:
 
 questions:
   - id: q1
     stage: quality_control
-    text: "How many reads passed the initial quality control (QC) filtering step?"
-    answer_type: integer_exact
+    text: "What is the average Phred score across all bases?"
+    answer_type: numeric_percent
+    tolerance: 1.0
 
   - id: q2
-    stage: basecalling
-    text: "What basecalling method was applied to convert raw signals into nucleotide sequences?"
-    answer_type: string_exact
+    stage: denoising
+    text: "How many ASVs were identified after denoising with DADA2?"
+    answer_type: integer_exact
 
   - id: q3
-    stage: alignment
-    text: "Which genome build was used for aligning the single-cell reads?"
+    stage: taxonomy_assignment
+    text: "Which phylum had the highest relative abundance in the sample?"
     answer_type: string_exact
 
   - id: q4
-    stage: gene_quantification
-    text: "What was the total number of unique genes detected per cell on average?"
+    stage: diversity_analysis
+    text: "How many unique genera were identified in the sample?"
     answer_type: integer_exact
 
   - id: q5
-    stage: barcode_correction
-    text: "How many barcodes remained after correction and filtering?"
-    answer_type: integer_exact
+    stage: diversity_analysis
+    text: "Which sample had the highest Shannon diversity index?"
+    answer_type: string_exact
