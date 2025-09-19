@@ -3,28 +3,17 @@ task: >
   You have been given 16S rRNA sequencing data (SRR35204195). Run the pipeline as described in the workflow and answer the following questions:
 
 questions:
-  - id: q1
-    stage: quality_control
-    text: "What is the average Phred score across all bases?"
-    answer_type: numeric_percent
-    tolerance: 1.0
+  Q1.   How many reads passed the initial quality control (QC) filtering step?
+   - *Answer Format*: Integer
 
-  - id: q2
-    stage: denoising
-    text: "How many ASVs were identified after denoising with DADA2?"
-    answer_type: integer_exact
+Q2. - Which gene was found to be the most highly expressed across all single cells?
+   - *Answer Format*: Exact string 
 
-  - id: q3
-    stage: taxonomy_assignment
-    text: "Which phylum had the highest relative abundance in the sample?"
-    answer_type: string_exact
+Q3.  - Which cell type was most abundant in the dataset?
+   - *Answer Format*: Exact string 
 
-  - id: q4
-    stage: diversity_analysis
-    text: "How many unique genera were identified in the sample?"
-    answer_type: integer_exact
+Q4.  - What was the total number of unique genes detected per cell on average?
+   - *Answer Format*: Integer
 
-  - id: q5
-    stage: diversity_analysis
-    text: "Which sample had the highest Shannon diversity index?"
-    answer_type: string_exact
+Q5. - How many barcodes remained after correction and filtering?
+   - *Answer Format*: Integer
